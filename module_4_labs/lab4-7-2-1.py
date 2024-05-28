@@ -63,12 +63,12 @@ def draw_move(board):
     
 while True:
     enter_move(field)
-    if victory_for(field, "O"):
+    if victory_for(field, "X"):
         break
     if draw_move(field):
         break
     computer_move(field)
-    if victory_for(field, "X"):
+    if victory_for(field, "O"):
         break
     if draw_move(field):
         break
