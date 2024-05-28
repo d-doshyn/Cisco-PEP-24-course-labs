@@ -1,6 +1,6 @@
 from random import randrange
 
-field = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
+field = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 def display_board(board):
     print( f'''
@@ -25,7 +25,7 @@ def enter_move(board):
     field_col = (move - 1) % 3
     
     if board[field_row][field_col] not in ["X", "O"]:
-        board[field_row][field_col] = "O"
+        board[field_row][field_col] = "X"
         display_board(board)
     else:
         print("This place i occupied. Try again.")
@@ -38,7 +38,7 @@ def computer_move(board):
         field_col = move % 3
         
         if board[field_row][field_col] not in ["X", "O"]:
-            board[field_row][field_col] = "X"
+            board[field_row][field_col] = "O"
             print("Computer's move: ", move + 1)
             display_board(board)
             break
