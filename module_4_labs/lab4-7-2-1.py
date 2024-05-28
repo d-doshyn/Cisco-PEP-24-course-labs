@@ -46,7 +46,7 @@ def computer_move(board):
             continue
 
 def victory_for(board, sign):
-    victory_combinations = [[1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
+    victory_combinations = [[1, 4, 7], [1, 2, 3], [4, 5, 6], [7, 8, 9], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
     for combination in victory_combinations:
         if all(board[(i - 1) // 3][(i - 1) % 3] == sign for i in combination):
             print(sign, "won!")
