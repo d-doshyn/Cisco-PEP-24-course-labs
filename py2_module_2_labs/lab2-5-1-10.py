@@ -1,12 +1,16 @@
 main_string = input("Enter main string: ")
 str_contains_main = input("Enter string that can contain main: ")
 
-letters_index_list = []
+iter_letters = []
+str_to_work = str_contains_main[:]
 
-for i in main_string:
-    letters_index_list.append(str_contains_main.find(i))
+for char in main_string:
+    str_to_work = str_to_work[str_to_work.find(char):]
+    iter_letters.append(str_to_work[0])
 
-if -1 in letters_index_list:
-    print("No")
-else:
+compare_str = ''.join(iter_letters)
+
+if main_string == compare_str:
     print("Yes")
+else:
+    print("No")
