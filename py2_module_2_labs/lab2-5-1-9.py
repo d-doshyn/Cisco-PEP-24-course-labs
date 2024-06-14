@@ -9,7 +9,7 @@ def sum_of_digits(num):
         num //= 10
     return sum
 
-while date_sum > 10:
+while date_sum >= 10:
     date_sum = sum_of_digits(date_sum)
 
 print(date_sum)
